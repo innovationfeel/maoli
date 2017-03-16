@@ -10,8 +10,8 @@
 
   .container
     - @project.images[1..@project.images.size].each do |image|
-      .row
+      .row.project-image
         .col-md-12.col-sm-12.col-xs-12
-          = image_tag image.url, class: 'project-image'
+          = image_tag image.url
 
 = render 'home/contact_us_screen'
