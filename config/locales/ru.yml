@@ -10,8 +10,11 @@ ru:
     about_us: О нас
     contact_us: Связаться с нами
     login: Вход
+    add_images: Добавить изображения
 
   about_us: 'Maoli – индивидуальный дизайн интерьера. Сделав свой индивидуальный заказ у нас, Вы шагнете на встречу своим желаниям и получите уникальный образ дома Вашей мечты.'
+  notice:
+    are_you_suere_to_detele_image: 'Are you sure you want to delete this image?'
 
   a:
     projects: Проекты
@@ -22,5 +25,6 @@ ru:
     login: Поехали
     add_project: Добавить проект
     edit_project: Редактировать
+    remove: удалить
     title:
       logo: 'Maoli – эксклюзивный дизайн интерьера'

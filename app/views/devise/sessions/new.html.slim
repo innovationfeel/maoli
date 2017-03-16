@@ -1,4 +1,4 @@
-/ = render 'home/header', home: false, admin: true
+/ = render 'home/header', home: false
 
 #login.container
   .row
@@ -22,7 +22,7 @@
             = f.label :remember_me
 
         .actions.text-center
-          = f.submit t('a.login'), class: 'btn btn-blue'
+          = f.submit t('a.login'), class: 'btn btn-success'
 
       / = render "devise/shared/links"
 

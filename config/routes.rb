@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
 
-  resources :projects
+  resources :projects do
+    resources :images, only: [:create, :destroy] # support #create and #destroy
+  end
 end

@@ -1,6 +1,27 @@
+= render 'home/header'
+
 #new-project.container
   .row
     .col-md-8.col-md-offset-2
       h2.text-center = t('a.edit_project')
       = form_for(@project, as: :project, url: project_path(@project)) do |field|
         = render 'form', field: field
+
+      hr
+      - @project.images.each_with_index do |image, index| #grab the index
+        ul.images
+          li
+            = image_tag(image.url)
+            br
+            .text-right
+              = link_to t('a.remove'), project_image_path(@project, index), class: 'btn btn-danger', method: :delete, data: { confirm: t('notice.are_you_suere_to_detele_image') }
+          hr
+
+      h2.text-center = t('title.add_images')
+
+      = form_for @project, url: project_images_path(@project), method: :post do |field|
+        .field
+          = field.file_field :images, multiple: true
+
+        .actions.text-center
+          = field.submit t('title.add_images'), class: 'btn btn-success'

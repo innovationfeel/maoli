@@ -6,7 +6,7 @@
           = t('title.projects')
           '&nbsp;
           - if user_signed_in?
-            = link_to t('a.add_project'), new_project_path, class: 'btn btn-blue'
+            = link_to t('a.add_project'), new_project_path, class: 'btn btn-success'
 
   .container
     .row
@@ -17,5 +17,6 @@
               = link_to (image_tag project.images.first.url(:preview), class: 'desaturate'), project_path(project)           
               = link_to project.title, project_path(project), class: 'title'
               - if user_signed_in?
-                p= link_to t('a.edit_project'), edit_project_path(project), class: 'btn btn-blue'
+                br
+                = link_to t('a.edit_project'), edit_project_path(project), class: 'btn btn-primary'
         

@@ -20,7 +20,7 @@
               li= link_to t('a.about_us'),   '/#about-us-screen',   class: 'menu-link'
               li= link_to t('a.contact_us'), '/#contact-us-screen', class: 'menu-link'
             - if user_signed_in?
-              li.text-right= link_to t('a.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-blue'
+              li.text-right= link_to t('a.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-warning'
 
 
     .hidden-sm.hidden-md.hidden-lg
@@ -36,4 +36,4 @@
               li= link_to t('a.about_us'),   '/#about-us-screen',   class: 'xs-menu-link'
               li= link_to t('a.contact_us'), '/#contact-us-screen', class: 'xs-menu-link'
             - if user_signed_in?
-              li.text-right= link_to t('a.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-blue'
+              li.text-right= link_to t('a.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-warning'

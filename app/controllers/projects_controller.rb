@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :find_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def new
     @project = Project.new
@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
 
 private
 
-  def find_project
+  def set_project
     @project = Project.find(params[:id])
   end
 

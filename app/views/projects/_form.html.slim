@@ -3,8 +3,9 @@
   br
   = local_assigns[:field].text_field :title, autofocus: true
 
-.field
-  = local_assigns[:field].file_field :images, multiple: true
+- if @project.new_record?
+  .field
+    = local_assigns[:field].file_field :images, multiple: true
 
 .field
   = local_assigns[:field].label :description
@@ -12,4 +13,4 @@
   = local_assigns[:field].text_area :description
 
 .actions.text-center
-  = local_assigns[:field].submit t('a.save'), class: 'btn btn-blue'
+  = local_assigns[:field].submit t('a.save'), class: 'btn btn-success'
