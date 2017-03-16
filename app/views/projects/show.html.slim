@@ -8,7 +8,10 @@
         h1.title= @project.title
         p.description= @project.description
 
-  - @project.images[1..@project.images.size].each do |image|
-    = image_tag image.url, class: 'project-image'
+  .container
+    - @project.images[1..@project.images.size].each do |image|
+      .row
+        .col-md-12.col-sm-12.col-xs-12
+          = image_tag image.url, class: 'project-image'
 
 = render 'home/contact_us_screen'
