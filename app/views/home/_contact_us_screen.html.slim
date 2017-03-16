@@ -1,0 +1,23 @@
+#contact-us-screen
+  .container
+    .row
+      .col-sm-6.col-md-6.col-xs-12
+        p= image_tag 'logo-inline.svg', class: 'logo-inline'
+        p.socials
+          = link_to 'https://www.facebook.com/maolidesign', target: '_blank', class: 'icon' do
+            span.glyphicon.fb
+          = link_to 'https://vk.com/maoli_design', target: '_blank', class: 'icon' do
+            span.glyphicon.vk
+          = link_to 'https://www.instagram.com/maoli_design', class: 'icon', target: '_blank' do
+            span.glyphicon.instagram
+
+      .col-sm-6.col-md-6.col-xs-12
+        h3= t('title.contact_us')
+        .row
+          .col-sm-6.col-md-6.col-xs-12
+            p= link_to 'maoli_design@gmail.com', 'mailto: maoli_design@gmail.com'
+          .col-sm-6.col-md-6.col-xs-12
+            p= '+38 068 255 00 15'
+            p= '+38 093 305 95 01'
+            p.copyright= '&nbsp;&nbsp;&copy; Copyright 2017'.html_safe
+        

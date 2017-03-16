@@ -1,0 +1,14 @@
+= render 'home/header', home: false
+
+#show-project
+  .cover-image style="background: url(#{@project.images.first.url}) no-repeat center center"
+  .container
+    .row
+      .col-md-12.col-sm-12.col-xs-12.text-left      
+        h1.title= @project.title
+        p.description= @project.description
+
+  - @project.images[1..@project.images.size].each do |image|
+    = image_tag image.url, class: 'project-image'
+
+= render 'home/contact_us_screen'

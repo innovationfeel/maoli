@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta content=('text/html; charset=UTF-8') http-equiv='Content-Type'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    meta name='keywords' content=t('meta.keywords')
+    meta name='description' content=t('meta.description')
+
+    meta property='og:image' content=image_url('logo-og.png')
+    meta property='og:title' content=t('meta.title')
+    meta property='og:description' content=t('meta.description')
+    meta property='og:url' content='http://maoli.com.ua'
+
+    title= t('meta.title')
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    = csrf_meta_tags
+  body
+    = yield

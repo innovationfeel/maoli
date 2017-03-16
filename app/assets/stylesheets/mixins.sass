@@ -1,0 +1,32 @@
+@mixin animation-duration($seconds)
+  -webkit-animation-duration: $seconds
+  -moz-animation-duration:    $seconds
+  -ms-animation-duration:     $seconds
+  -o-animation-duration:      $seconds
+
+@mixin animation-delay($seconds)
+  -webkit-animation-delay: $seconds
+  -moz-animation-delay:    $seconds
+  -ms-animation-delay:     $seconds
+  -o-animation-delay:      $seconds
+
+@mixin transition($attr, $seconds, $type)
+  -webkit-transition: $attr $seconds $type
+  -moz-transition:    $attr $seconds $type
+  -ms-transition:     $attr $seconds $type
+  -o-transition:      $attr $seconds $type
+  transition:         $attr $seconds $type
+
+@mixin shadow($offX, $offY, $radiusBlur, $extension, $color)
+  -webkit-box-shadow: $offX $offY $radiusBlur $extension $color
+  -moz-box-shadow:    $offX $offY $radiusBlur $extension $color
+  -ms-box-shadow:     $offX $offY $radiusBlur $extension $color
+  -o-box-shadow:      $offX $offY $radiusBlur $extension $color
+  box-shadow:         $offX $offY $radiusBlur $extension $color
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  -o-border-radius:      $radius
+  border-radius:         $radius

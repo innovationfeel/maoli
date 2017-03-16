@@ -1,0 +1,41 @@
+@import 'bourbon'
+
+#projects-screen
+  h1
+    a
+      font-size: em(5px)
+
+  .projects
+    /* Prevent vertical gaps */
+    line-height: 0
+
+    -webkit-column-gap:   0px
+    -moz-column-gap:      0px
+    column-gap:           0px
+
+    .project
+      margin: 0 40px 50px 0
+      text-align: left
+      p
+        margin: 25px 0 10px 0
+      a.title
+        font-family: 'AthelasW01Regular'
+        font-size: 30px
+        color: $h2
+      img
+        /* Just in case there are inline attributes */
+        width: 100% !important
+        height: auto !important
+
+        &.desaturate
+          @include transition(all, 0.5s, ease)
+          -webkit-filter: grayscale(1)
+          -webkit-filter: grayscale(100%)
+          filter: grayscale(100%)
+          filter: grayscale(1)
+
+          &:hover
+            filter: grayscale(0)
+            -webkit-filter: grayscale(0)
+            -webkit-filter: grayscale(0%)
+            filter: grayscale(0%)

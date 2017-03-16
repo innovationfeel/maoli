@@ -1,0 +1,6 @@
+#new-project.container
+  .row
+    .col-md-8.col-md-offset-2
+      h2.text-center = t('a.add_project')
+      = form_for(@project, as: :project, url: projects_path) do |field|
+        = render 'form', field: field

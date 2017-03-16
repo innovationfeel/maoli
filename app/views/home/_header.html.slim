@@ -1,0 +1,39 @@
+#header
+  .container
+    .row
+      .col-md-2.col-sm-2.col-xs-4
+        = link_to root_path, class: 'logo', title: t('a.title.logo') do
+          = image_tag 'logo.svg'
+
+      .col-md-9.col-sm-9.col-xs-8.lg-menu
+        = link_to '#', class: 'nav-toggle hidden-sm hidden-md hidden-lg' do
+          span
+
+        nav.hidden-xs
+          ul
+            - if local_assigns[:home]
+              li= link_to t('a.projects'),   '#', class: 'menu-link scroll', target: 'projects-screen'
+              li= link_to t('a.about_us'),   '#', class: 'menu-link scroll', target: 'about-us-screen'
+              li= link_to t('a.contact_us'), '#', class: 'menu-link scroll', target: 'contact-us-screen'
+            - else
+              li= link_to t('a.projects'),   '/#projects-screen',   class: 'menu-link'
+              li= link_to t('a.about_us'),   '/#about-us-screen',   class: 'menu-link'
+              li= link_to t('a.contact_us'), '/#contact-us-screen', class: 'menu-link'
+            - if user_signed_in?
+              li.text-right= link_to t('a.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-blue'
+
+
+    .hidden-sm.hidden-md.hidden-lg
+      .xs-main-menu.xs-menu
+        nav
+          ul
+            - if local_assigns[:home]
+              li= link_to t('a.projects'),   '#', class: 'xs-menu-link scroll', target: 'projects-screen'
+              li= link_to t('a.about_us'),   '#', class: 'xs-menu-link scroll', target: 'about-us-screen'
+              li= link_to t('a.contact_us'), '#', class: 'xs-menu-link scroll', target: 'contact-us-screen'
+            - else
+              li= link_to t('a.projects'),   '/#projects-screen',   class: 'xs-menu-link'
+              li= link_to t('a.about_us'),   '/#about-us-screen',   class: 'xs-menu-link'
+              li= link_to t('a.contact_us'), '/#contact-us-screen', class: 'xs-menu-link'
+            - if user_signed_in?
+              li.text-right= link_to t('a.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-blue'

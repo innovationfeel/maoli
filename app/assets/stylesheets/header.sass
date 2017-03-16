@@ -1,0 +1,125 @@
+@import 'bourbon'
+
+#header
+  position: relative
+  padding: 15px 0
+  width: 100%
+  height: 85px
+  background-color: #fff
+  z-index: 2
+  color: $main-menu
+
+  // @include transition(all, 0.3s, ease)
+  //
+  // a
+  //   color: #fff
+  //   -webkit-transition: color 0.2s ease, width 0.4s ease
+  //   -moz-transition: color 0.2s ease, width 0.4s ease
+  //   -ms-transition: color 0.2s ease, width 0.4s ease
+  //   -o-transition: color 0.2s ease, width 0.4s ease
+  //   transition: color 0.2s ease, width 0.4s ease
+  //   &:hover, &:focus, &:active
+  //     color: $blue
+  //   &.menu-link
+  //     padding: 0
+  //     text-decoration: none
+  //     display: block
+  //     border-bottom: 3px solid transparent
+  //     white-space: nowrap
+  //     width: 0%
+  //     &:hover, &:focus, &:active
+  //       width: 100%
+  //       border-bottom: 3px solid $blue
+  //
+  // .additional-logo-title
+  //   color: white
+  //   position: absolute
+  //   margin: 22px 0 0 10px
+  //   font-size: em(12px)
+  //   font-weight: bold
+
+  .nav-toggle
+    float: right
+    width: 30px
+    height: 30px
+    line-height: 30px
+    margin-top: 10px
+    display: block
+
+    span
+      margin-top: 15px
+      position: relative
+      display: block
+      width: 100%
+      height: 3px
+      background-color: $main-menu
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+      &:after, &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: -9px
+        width: 100%
+        height: 3px
+        background-color: $main-menu
+        @include transition(all, 0.3s, ease)
+        backface-visibility: hidden
+        border-radius: 2px
+      &:after
+        top: 9px
+
+    &.on span
+      background-color: transparent
+      &:before
+        background-color: $main-menu
+        transform: rotate(45deg) translate(5px, 5px)
+      &:after
+        background-color: $main-menu
+        transform: rotate(-45deg) translate(7px, -8px)
+
+  .lg-menu nav
+    text-align: center
+    ul
+      @extend .ul.inline
+    li
+      line-height: 55px
+      padding: 0 40px
+
+  .xs-main-menu
+    height: 100%
+    @extend .valign-center
+    li
+      &:last-child
+        text-align: center
+        &:hover
+          background: none
+
+  a.logo
+    img
+      width: 114px
+      height: 55px
+      object-fit: contain
+
+  // &.affix
+  //   background: $dark-grey
+  //   padding-top: 5px
+  //   width: 100%
+  //   @include shadow(0, 4px, 4px, -4px, #000000)
+  //
+  //   div.popover[role=tooltip]
+  //     background-color: rgba(0,0,0,0.8)
+  //     .arrow:after
+  //       border-bottom-color: rgba(0,0,0,0.5)
+  //   a.logo
+  //     img.img-logo
+  //       width: 30px
+  //       height: 30px
+  //
+  //   .container
+  //     .lg-menu nav
+  //       ul
+  //         margin: 0
+  //       li.menu-item
+  //         line-height: 40px

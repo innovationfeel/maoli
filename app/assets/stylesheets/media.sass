@@ -1,0 +1,133 @@
+// Media queries
+
+@media (min-width: $screen-lg-min)
+  html, body
+    font-size: em(16px)
+  h1
+    font-size: em(48px)
+  h2
+    font-size: em(30px)
+  
+  #projects-screen
+    .projects
+      -moz-column-count:    3
+      -webkit-column-count: 3
+      column-count:         3
+
+
+@media (max-width: $screen-md-max)
+  html, body
+    font-size: em(16px)
+  h1
+    font-size: em(46px)
+  h2
+    font-size: em(28px)
+  #main-screen
+    .main-content
+      h1
+        font-size: em(124px)
+
+  #projects-screen
+    .projects
+      -moz-column-count:    3
+      -webkit-column-count: 3
+      column-count:         3
+
+
+@media (max-width: $screen-sm-max)
+  html, body
+    font-size: em(14px)
+  h1
+    font-size: em(46px)
+  h2
+    font-size: em(28px)
+
+  #header
+    .lg-menu nav
+      li
+        padding: 0 25px
+
+  #main-screen
+    .main-content
+      h1
+        font-size: em(104px)
+
+  #contact-us-screen
+    font-size: em(18px)
+    img.logo-inline
+      width: 300px
+    a
+      font-size: em(18px)
+
+  #projects-screen
+    .projects
+      -moz-column-count:    2
+      -webkit-column-count: 2
+      column-count:         2
+
+
+@media (max-width: $screen-xs-max)
+  html, body
+    font-size: em(14px)
+  h1
+    text-align: center
+    font-size: em(44px)
+  h2
+    font-size: em(26px)
+
+  .xs-menu
+    nav
+      margin-top: -130px
+    li
+      padding: 20px 0
+    a.xs-menu-link
+      font-size: 24px
+
+  #main-screen
+    .main-content
+      justify-content: center
+      h1
+        opacity: 1
+        font-size: em(82px)
+
+  #about-us-screen
+    padding: 30px 0
+    h1
+      padding: 10px 0 20px 0
+    p
+      text-align: center
+      font-size: 16px
+
+  #contact-us-screen
+    text-align: center
+    font-size: em(20px)
+    padding: 50px 0 30px 0
+    h3
+      text-align: center
+    img.logo-inline
+      width: 280px
+      margin: 0
+    p
+      &.socials
+        margin: 35px 0
+        a
+          margin-right: 20px
+
+  #projects-screen
+    .projects
+      -moz-column-count:    1
+      -webkit-column-count: 1
+      column-count:         1
+      .project
+        margin: 0 0 50px 0
+        text-align: center
+
+  #show-project
+    h1.title
+      margin: 0
+      padding: 0
+    p.description
+      text-align: center
+      margin: 10px 0 20px 0
+    img.project-image
+      margin-bottom: 20px
