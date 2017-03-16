@@ -46,14 +46,13 @@ namespace :puma do
 end
 
 namespace :deploy do
-  # desc "Create config files from examples"
-  # task :init_config_files do
-  #   on roles(:app) do
-  #     execute "cp #{deploy_to}/database.yml #{release_path}/config/database.yml"
-  #     execute "cp #{deploy_to}/secrets.yml #{release_path}/config/secrets.yml"
-  #     execute "cp #{deploy_to}/settings.yml #{release_path}/config/settings.yml"
-  #   end
-  # end
+  desc "Create config files from examples"
+  task :init_config_files do
+    on roles(:app) do
+      execute "cp #{deploy_to}/database.yml #{release_path}/config/database.yml"
+      execute "cp #{deploy_to}/secrets.yml #{release_path}/config/secrets.yml"
+    end
+  end
 
   desc "Make sure local git is in sync with remote."
   task :check_revision do
@@ -82,7 +81,7 @@ namespace :deploy do
   end
 
   before :starting,       :check_revision
-  # before :compile_assets, :init_config_files
+  before :compile_assets, :init_config_files
   after  :finishing,      :compile_assets
   after  :finishing,      :cleanup
   after  :finishing,      :restart
