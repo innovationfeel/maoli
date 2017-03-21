@@ -1,4 +1,6 @@
 ready = ->
+  $('.carousel').carousel()
+
   $('#header .nav-toggle').on 'click', ->
     $(this).toggleClass('on')
     toggleMenu('#header .xs-main-menu')

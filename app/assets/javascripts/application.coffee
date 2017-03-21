@@ -13,4 +13,6 @@
 #= require jquery
 #= require jquery_ujs
 #= require_tree .
+#= require twitter/bootstrap/transition
+#= require twitter/bootstrap/carousel
 #= require main
