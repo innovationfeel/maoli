@@ -15,4 +15,5 @@
 #= require_tree .
 #= require twitter/bootstrap/transition
 #= require twitter/bootstrap/carousel
+#= require twitter/bootstrap/affix
 #= require main
