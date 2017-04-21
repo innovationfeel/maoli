@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.order(created_at: :desc).all
   end
 end
